@@ -1,5 +1,5 @@
 # dupscout
-
+![CI](https://github.com/KelvinNgeno/dupscout/actions/workflows/ci.yml/badge.svg)
 Find duplicate files and see how much disk space they waste. Written in Rust
 with zero third-party dependencies.
 
