@@ -70,12 +70,7 @@ fn parse_args() -> Result<Config, String> {
 
 /// Walk `dir` recursively and bucket regular files by size.
 /// Symlinks are skipped so we never loop or count a file twice.
-fn collect(
-    dir: &Path,
-    min_size: u64,
-    by_size: &mut HashMap<u64, Vec<PathBuf>>,
-    errors: &mut u32,
-) {
+fn collect(dir: &Path, min_size: u64, by_size: &mut HashMap<u64, Vec<PathBuf>>, errors: &mut u32) {
     let entries = match fs::read_dir(dir) {
         Ok(e) => e,
         Err(e) => {
